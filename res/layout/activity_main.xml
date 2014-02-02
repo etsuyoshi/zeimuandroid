@@ -11,7 +11,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
 	/>
-    
+    <!-- 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         android:text="(弱点克服機能付き)"
         android:textSize="35sp"
         android:textStyle="bold"
-        />
+        /> -->
 
     <Button
         android:id="@+id/bt_start"
@@ -33,7 +33,7 @@
         android:height="40dp"
         android:layout_below="@+id/im_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:onClick="onClick"
         android:text="@string/init_start" />
     <Button

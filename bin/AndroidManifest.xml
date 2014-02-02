@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zeimu.zeimu03.comp.sneky"
-     android:versionCode="010436"
-    android:versionName="01.04.36" >
+     android:versionCode="010437"
+    android:versionName="01.04.37" >
 
     <uses-sdk
         android:minSdkVersion="8"

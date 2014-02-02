@@ -21,11 +21,11 @@ public class MainActivity extends Activity implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        TextView tvTitle = (TextView)findViewById(R.id.tx_title);
-        tvTitle.setText("‹âs‹Æ–±ŒŸ’èÅ–±‚R‹‰\n");
-        
-        TextView tvSub = (TextView)findViewById(R.id.tx_sub_title);
-        tvSub.setText("presented by ‹à—ZŒoÏ‹³ˆçŒ¤‹†‰ï");
+//        TextView tvTitle = (TextView)findViewById(R.id.tx_title);
+//        tvTitle.setText("‹âs‹Æ–±ŒŸ’èÅ–±‚R‹‰\n");
+//        
+//        TextView tvSub = (TextView)findViewById(R.id.tx_sub_title);
+//        tvSub.setText("presented by ‹à—ZŒoÏ‹³ˆçŒ¤‹†‰ï");
         
         
     }
