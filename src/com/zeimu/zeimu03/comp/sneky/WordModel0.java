@@ -348,9 +348,9 @@ public class WordModel0 extends Activity implements OnClickListener, OnCheckedCh
 						}
 					}else{
 						qNo++;
-						System.out.println("–â‘è”Ô†‰ÁŽZ->" + qNo);
+						System.out.println("–â‘è”Ô†‰ÁŽZ->Œ‹‰ÊF" + qNo);
 					}
-		    		System.out.println(qNo + "‚ð•\Ž¦‚µ‚Ü‚·B–â‘èŠi”[”Ô†->" + sData.getQuestionNo());
+		    		System.out.println(qNo + "‚ð•\Ž¦‚µ‚Ü‚·B–â‘èŠi”[”->" + sData.getQuestionNo());
 	    			if(qNo < sData.getQuestionNo()){//–â‘è”Ô†‚ªŠi”[”ˆÈ‰º‚È‚ç
 	    				if(!(sData.getQuestion(qNo).equals("-"))){//Ž¿–â•¶‚ÉƒnƒCƒtƒ“‚ª‚ ‚é‚±‚Æ‚Í‚È‚¢‚ª”O‚Ì‚½‚ß
 	    					//’Êí‚ÍˆÈ‰ºˆ—‚ªŽÀs‚³‚ê‚é‚¾‚¯‚ÅAðŒ•ªŠò‚Í‚³‚ê‚È‚¢‚Í‚¸(ƒnƒCƒtƒ“‚ª“ü‚é‚±‚Æ‚Í–³‚¢‚½‚ß)

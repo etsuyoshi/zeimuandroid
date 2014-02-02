@@ -35,6 +35,10 @@ public class SelectStory extends Activity implements OnClickListener{
 	private String selection[][];
 	private String explain[];
 	
+	private final int readingRowCount = 100;
+	private final int readingColCount = 21; 
+
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		System.out.println("SELECT_STORY!!");
@@ -42,7 +46,7 @@ public class SelectStory extends Activity implements OnClickListener{
 		System.out.println("onCreate complete!");
 		setContentView(R.layout.select_story);
 		
-		int readingRowCount = 50;
+		
 		sectNo = new String[readingRowCount];
 		qNo = new String[readingRowCount];
 		category = new String();
@@ -234,7 +238,7 @@ public class SelectStory extends Activity implements OnClickListener{
 		br = new BufferedReader(new InputStreamReader(is));
 		
 		//strCSV配列(二次元)に格納
-		strCSV = new String[500][31];//500x31次元マトリクス
+		strCSV = new String[readingRowCount][readingColCount];//500x21次元マトリクス
 		
 		try{
 			for(int row = 0;row<strCSV.length;row++){
@@ -341,7 +345,7 @@ public class SelectStory extends Activity implements OnClickListener{
 				System.out.println("strCSV = " + strCSV[rowCSV][1]);
 			}
 			
-			String strNoSect = strCSV[rowCSV][0].substring(4,7);
+			String strNoSect = strCSV[rowCSV][0].substring(4,7);//SECTXXX0のXXXを取り出す
 			int intNoSect = Integer.parseInt(strNoSect);
 //			System.out.println(strNoSect + " : sect no = " + intNoSect);
 			//現在の行の問題文がハイフンであるならば次の行を読み込む
@@ -392,14 +396,18 @@ public class SelectStory extends Activity implements OnClickListener{
 				
 				break;
 			}
-			rowCSV ++;
+			rowCSV ++;//Sect001, Sect002, ...というような順番にはなっていないので全て見る必要がある
 		}while(true);
 		//選択肢selectionは5列目から9列目(col=4-8)を読み込んで格納
 		
 		
 		//問題の最後に達したら、問題格納配列questionの要素数を当該問題番号rowまでoutputQuestionにする
-		outputQuestion = new String[rowCSV-1];
+//		outputQuestion = new String[rowCSV-1];//最初はファイルの格納数＝outputQuestion.lengthだったから良かったが、今は異なる(一つのファイルtest0001には他のセクターも入っている)
+		outputQuestion = new String[noArray-2];
+//		System.out.println("error at " + outputQuestion.length);
+		//outputQuestionの最初から最後までの配列を、question(:に(最初から)貼付ける
 		System.arraycopy(question, 0, outputQuestion, 0, outputQuestion.length);
+		
 		
 		for(int no = 0;no<outputQuestion.length;no++){
 			System.out.println(no + ","  + outputQuestion[no]);
