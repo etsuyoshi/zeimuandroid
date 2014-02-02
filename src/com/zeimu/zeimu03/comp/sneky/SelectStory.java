@@ -86,10 +86,13 @@ public class SelectStory extends Activity implements OnClickListener{
 			System.out.println("pressed finish button!");
 			finish();
 			return;
-		}else if(((Button)v).getId()==R.id.s_st_bt_Q1){
+		}
+		
+		InputStream is = res01.openRawResource(R.raw.test0001);
+		if(((Button)v).getId()==R.id.s_st_bt_Q1){
 			System.out.println("pressed story1");
 //			InputStream is = res01.openRawResource(R.raw.zeimu201203_001);
-			InputStream is = res01.openRawResource(R.raw.zeimu01);
+//			InputStream is = res01.openRawResource(R.raw.zeimu01);
 			if (setQSA2(is, 1)){//ファイルの読み込みに成功したらStoreDataオブジェクトのフィールドにcsv情報が格納される。
 				System.out.println("reading csv file succeed!!");
 				Intent intent=new Intent(SelectStory.this, WordModel0.class);
@@ -110,7 +113,7 @@ public class SelectStory extends Activity implements OnClickListener{
 		}else if(((Button)v).getId()==R.id.s_st_bt_Q2){
 			System.out.println("pressed story2");
 //			InputStream is = res01.openRawResource(R.raw.zeimu201203_002);
-			InputStream is = res01.openRawResource(R.raw.zeimu02);
+//			InputStream is = res01.openRawResource(R.raw.zeimu02);
 			if (setQSA2(is, 2)){//ファイルの読み込みに成功したらStoreDataオブジェクトのフィールドにcsv情報が格納される。
 				System.out.println("reading csv file succeed!!");
 				Intent intent=new Intent(SelectStory.this, WordModel0.class);
@@ -131,7 +134,7 @@ public class SelectStory extends Activity implements OnClickListener{
 		}else if(((Button)v).getId()==R.id.s_st_bt_Q3){
 			System.out.println("pressed story3");
 //			InputStream is = res01.openRawResource(R.raw.zeimu201203_003);
-			InputStream is = res01.openRawResource(R.raw.zeimu03);
+//			InputStream is = res01.openRawResource(R.raw.zeimu03);
 			if (setQSA2(is, 3)){//ファイルの読み込みに成功したらStoreDataオブジェクトのフィールドにcsv情報が格納される。
 				System.out.println("reading csv file succeed!!");
 				Intent intent=new Intent(SelectStory.this, WordModel0.class);
@@ -151,7 +154,7 @@ public class SelectStory extends Activity implements OnClickListener{
 			
 		}else if(((Button)v).getId()==R.id.s_st_bt_Q4){
 			System.out.println("pressed story4");
-			InputStream is = res01.openRawResource(R.raw.zeimu04);
+//			InputStream is = res01.openRawResource(R.raw.zeimu04);
 			if (setQSA2(is, 4)){//ファイルの読み込みに成功したらStoreDataオブジェクトのフィールドにcsv情報が格納される。
 				System.out.println("reading csv file succeed!!");
 				Intent intent=new Intent(SelectStory.this, WordModel0.class);
@@ -171,7 +174,7 @@ public class SelectStory extends Activity implements OnClickListener{
 			
 		}else if(((Button)v).getId()==R.id.s_st_bt_Q5){
 			System.out.println("pressed story5");
-			InputStream is = res01.openRawResource(R.raw.zeimu05);
+//			InputStream is = res01.openRawResource(R.raw.zeimu05);
 			if (setQSA2(is, 5)){//ファイルの読み込みに成功したらStoreDataオブジェクトのフィールドにcsv情報が格納される。
 				System.out.println("reading csv file succeed!!");
 				Intent intent=new Intent(SelectStory.this, WordModel0.class);
@@ -190,7 +193,7 @@ public class SelectStory extends Activity implements OnClickListener{
 			
 		}else if(((Button)v).getId()==R.id.s_st_bt_Q6){
 			System.out.println("pressed story6");
-			InputStream is = res01.openRawResource(R.raw.zeimu06);
+//			InputStream is = res01.openRawResource(R.raw.zeimu06);
 			if (setQSA2(is, 6)){//ファイルの読み込みに成功したらStoreDataオブジェクトのフィールドにcsv情報が格納される。
 				System.out.println("reading csv file succeed!!");
 				Intent intent=new Intent(SelectStory.this, WordModel0.class);
@@ -231,7 +234,7 @@ public class SelectStory extends Activity implements OnClickListener{
 		br = new BufferedReader(new InputStreamReader(is));
 		
 		//strCSV配列(二次元)に格納
-		strCSV = new String[50][21];//50x20次元マトリクス
+		strCSV = new String[500][31];//500x31次元マトリクス
 		
 		try{
 			for(int row = 0;row<strCSV.length;row++){
@@ -326,21 +329,21 @@ public class SelectStory extends Activity implements OnClickListener{
 		do{//カウンターrowCSVでループ
 			System.out.println("rowCSV =  " + rowCSV);
 			if(strCSV[rowCSV][1] == null ||
-					strCSV[rowCSV][1].equals("[EOF]")){
+					strCSV[rowCSV][0].equals("[EOF]")){
 				/*
 				 * strCSV配列の最後まで読み込んだとき 
 				 */
 				//strCSVを格納する時に[EOF]の行はゼロ列目が[EOF]で１列目以降はnull
-				System.out.println(rowCSV + "行目の一列目がNullもしくは[EOF]ですので最後まで配列に格納し終わりました。");
+				System.out.println(rowCSV + "行目の2列目がNullもしくは1列目が[EOF]ですので最後まで配列に格納し終わりました。");
 				break;
 			}else{
 				//デバッグの必要
 				System.out.println("strCSV = " + strCSV[rowCSV][1]);
 			}
 			
-			String strNoSect = strCSV[rowCSV][0].substring(4,6);
+			String strNoSect = strCSV[rowCSV][0].substring(4,7);
 			int intNoSect = Integer.parseInt(strNoSect);
-			System.out.println("sect no = " + intNoSect);
+//			System.out.println(strNoSect + " : sect no = " + intNoSect);
 			//現在の行の問題文がハイフンであるならば次の行を読み込む
 //			if((!strCSV[rowCSV][3].equals("-"))){//現状ファイルで-は存在しない
 			if(intNoSect == noAllowedSect){//指定された章番号の時のみ各配列(sectNo等)に格納

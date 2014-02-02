@@ -463,18 +463,19 @@ public final class R {
         public static final int activity_main=0x7f090000;
     }
     public static final class raw {
-        public static final int zeimu01=0x7f040000;
-        public static final int zeimu02=0x7f040001;
-        public static final int zeimu03=0x7f040002;
-        public static final int zeimu04=0x7f040003;
-        public static final int zeimu05=0x7f040004;
-        public static final int zeimu06=0x7f040005;
-        public static final int zeimu201110_006=0x7f040006;
-        public static final int zeimu201203_001=0x7f040007;
-        public static final int zeimu201203_002=0x7f040008;
-        public static final int zeimu201203_003=0x7f040009;
-        public static final int zeimu201203_004=0x7f04000a;
-        public static final int zeimu201203_005=0x7f04000b;
+        public static final int test0001=0x7f040000;
+        public static final int zeimu01=0x7f040001;
+        public static final int zeimu02=0x7f040002;
+        public static final int zeimu03=0x7f040003;
+        public static final int zeimu04=0x7f040004;
+        public static final int zeimu05=0x7f040005;
+        public static final int zeimu06=0x7f040006;
+        public static final int zeimu201110_006=0x7f040007;
+        public static final int zeimu201203_001=0x7f040008;
+        public static final int zeimu201203_002=0x7f040009;
+        public static final int zeimu201203_003=0x7f04000a;
+        public static final int zeimu201203_004=0x7f04000b;
+        public static final int zeimu201203_005=0x7f04000c;
     }
     public static final class string {
         public static final int app_name=0x7f070000;
