@@ -2,47 +2,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/draw_background_grad_brown" >
+    android:background="@drawable/draw_background_orange" >
+    <ImageView 
+        android:id="@+id/im_title"
+		android:layout_height="200dp"
+		android:layout_width="260dp"
+		android:src="@drawable/takken_hyoshi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+	/>
     
     <TextView
-        android:id="@+id/tx_title"
+        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:text="@string/init_title"
-        android:textSize="24dp"
-        tools:context=".MainActivity" />
-	<TextView
-	    android:id="@+id/tx_sub_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:text=""
-        android:textSize="10dp"
-        android:gravity="right"
-        tools:context=".MainActivity"
-        android:background="#8b4513"
-        android:textColor="#ffffff"
+        android:layout_below="@+id/im_title"
+        android:layout_marginTop="1dp"
+        android:layout_centerHorizontal = "true"
+        android:text="(弱点克服機能付き)"
+        android:textSize="35sp"
+        android:textStyle="bold"
         />
-	
+
     <Button
         android:id="@+id/bt_start"
-        android:background="@drawable/draw_button_grad"
-        android:textColor="#ffffff"
+        android:background="@drawable/draw_button_grad_green"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="200dp"
         android:height="40dp"
-        android:layout_below="@+id/tx_title"
+        android:layout_below="@+id/im_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
         android:onClick="onClick"
         android:text="@string/init_start" />
     <Button
         android:id="@+id/bt_exit"
-        android:background="@drawable/draw_button_grad"
-        android:textColor="#ffffff"
+        android:background="@drawable/draw_button_grad_green"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="200dp"
