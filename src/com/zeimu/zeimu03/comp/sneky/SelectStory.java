@@ -35,7 +35,7 @@ public class SelectStory extends Activity implements OnClickListener{
 	private String selection[][];
 	private String explain[];
 	
-	private final int readingRowCount = 100;
+	private final int readingRowCount = 500;
 	private final int readingColCount = 21; 
 
 	
@@ -403,7 +403,7 @@ public class SelectStory extends Activity implements OnClickListener{
 		
 		//問題の最後に達したら、問題格納配列questionの要素数を当該問題番号rowまでoutputQuestionにする
 //		outputQuestion = new String[rowCSV-1];//最初はファイルの格納数＝outputQuestion.lengthだったから良かったが、今は異なる(一つのファイルtest0001には他のセクターも入っている)
-		outputQuestion = new String[noArray-2];
+		outputQuestion = new String[noArray];
 //		System.out.println("error at " + outputQuestion.length);
 		//outputQuestionの最初から最後までの配列を、question(:に(最初から)貼付ける
 		System.arraycopy(question, 0, outputQuestion, 0, outputQuestion.length);
