@@ -7,7 +7,7 @@
         android:id="@+id/im_title"
 		android:layout_height="200dp"
 		android:layout_width="260dp"
-		android:src="@drawable/takken_hyoshi"
+		android:src="@drawable/zeimu_hyoshi"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
 	/>
